@@ -1,0 +1,196 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #e42159; }
+
+body {
+  background: #43cea2;
+  /* Non support */
+  background: -webkit-linear-gradient(90deg, #43cea2, #185a9d);
+  /* Chrome 10+, Saf5.1+ */
+  background: -moz-linear-gradient(90deg, #43cea2, #185a9d);
+  /* FF3.6+ */
+  background: -ms-linear-gradient(90deg, #43cea2, #185a9d);
+  /* IE10 */
+  background: -o-linear-gradient(90deg, #43cea2, #185a9d);
+  /* Opera 11.10+ */
+  background: linear-gradient(90deg, #5fc3e1, #D9D9D9);
+  /* W3C */ }
+  body header {
+    min-height: 8vh;
+    background: #5fc3e1;
+    border-bottom: 4px solid #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px; }
+    body header #logo {
+      display: block;
+      width: 150px;
+      height: 27px;
+      text-indent: -9999px;
+      background: transparent url("../images/logo.png") no-repeat center center;
+      background-size: 100% auto; }
+      @media screen and (min-width: 450px) {
+        body header #logo {
+          width: 200px;
+          height: 36px;
+          align-items: center;
+          justify-content: center; } }
+    @media screen and (min-width: 450px) {
+      body header {
+        justify-content: left;
+        padding-left: 10px; } }
+  body main > .row {
+    height: 84vh;
+    min-height: 500px;
+    margin: 0;
+    padding: 20px 40px; }
+    body main > .row #people-wrapper div {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      position: absolute;
+      top: 0px;
+      left: 0px; }
+    body main > .row #people-wrapper div:nth-of-type(1) {
+      background-image: url("../images/people_1.png"); }
+    body main > .row #people-wrapper div:nth-of-type(3) {
+      background-image: url("../images/people_2.png"); }
+    body main > .row #people-wrapper div:nth-of-type(2) {
+      background-image: url("../images/people_3.png"); }
+    body main > .row #in-progress .row {
+      height: 100%;
+      padding: 0; }
+      body main > .row #in-progress .row #man {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: transparent url("../images/man.png") no-repeat center center;
+        background-size: contain; }
+        @media screen and (min-width: 576px) {
+          body main > .row #in-progress .row #man {
+            background-position: left center; } }
+      body main > .row #in-progress .row #shout-text {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        font-size: 35px;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center; }
+        @media screen and (min-width: 400px) {
+          body main > .row #in-progress .row #shout-text {
+            font-size: 50px; } }
+        @media screen and (min-width: 576px) and (min-height: 600px) {
+          body main > .row #in-progress .row #shout-text {
+            text-align: left;
+            font-size: 75px; } }
+        @media screen and (min-width: 768px) {
+          body main > .row #in-progress .row #shout-text {
+            font-size: 50px; } }
+        @media screen and (min-width: 900px) {
+          body main > .row #in-progress .row #shout-text {
+            font-size: 70px; } }
+        @media screen and (min-width: 1100px) {
+          body main > .row #in-progress .row #shout-text {
+            font-size: 90px; } }
+        @media screen and (min-width: 1300px) {
+          body main > .row #in-progress .row #shout-text {
+            font-size: 100px; } }
+    @media screen and (min-width: 400px) {
+      body main > .row #in-progress {
+        text-align: left; } }
+  body footer {
+    padding: 0 30px;
+    min-height: 8vh;
+    border-top: 2px solid #D9D9D9;
+    background: #5fc3e1;
+    text-align: center; }
+    @media screen and (max-width: 992px) {
+      body footer .row div:first-of-type:before {
+        content: "";
+        position: absolute;
+        left: 25%;
+        bottom: 0;
+        height: 2px;
+        width: 50%;
+        /* or 100px */
+        background: #e42159; } }
+    body footer h2 {
+      font-weight: 400;
+      font-size: 20px;
+      text-transform: uppercase;
+      margin-top: 10px;
+      padding-bottom: 5px; }
+    body footer #links {
+      margin-top: 10px; }
+      body footer #links span {
+        font-size: 15px;
+        display: inline-block;
+        margin-left: 25px;
+        height: 25px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: auto 100%;
+        padding-left: 25px;
+        padding-top: 5px; }
+      body footer #links #phone {
+        background-image: url("../images/ico_phone.png"); }
+      body footer #links #email {
+        background-image: url("../images/ico_email.png");
+        background-size: 23px auto;
+        padding-left: 30px; }
+      body footer #links #address {
+        background-image: url("../images/ico_address.png");
+        background-size: 14px auto;
+        padding-left: 17px; }
+    @media screen and (min-width: 992px) {
+      body footer {
+        text-align: left; } }
+    @media screen and (min-width: 1270px) {
+      body footer {
+        padding-top: 20px; } }
+
+/*# sourceMappingURL=main.css.map */
