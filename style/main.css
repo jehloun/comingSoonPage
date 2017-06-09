@@ -34,25 +34,14 @@ html, body {
   color: #e42159; }
 
 body {
-  background: #43cea2;
-  /* Non support */
-  background: -webkit-linear-gradient(90deg, #43cea2, #185a9d);
-  /* Chrome 10+, Saf5.1+ */
-  background: -moz-linear-gradient(90deg, #43cea2, #185a9d);
-  /* FF3.6+ */
-  background: -ms-linear-gradient(90deg, #43cea2, #185a9d);
-  /* IE10 */
-  background: -o-linear-gradient(90deg, #43cea2, #185a9d);
-  /* Opera 11.10+ */
-  background: linear-gradient(90deg, #5fc3e1, #D9D9D9);
-  /* W3C */ }
+  background: #D9D9D9; }
   body header {
     min-height: 8vh;
-    background: #5fc3e1;
-    border-bottom: 4px solid #D9D9D9;
+    display: -webkit-flex;
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-justify-content: center;
     padding: 10px; }
     body header #logo {
       display: block;
@@ -64,13 +53,12 @@ body {
       @media screen and (min-width: 450px) {
         body header #logo {
           width: 200px;
-          height: 36px;
-          align-items: center;
-          justify-content: center; } }
-    @media screen and (min-width: 450px) {
+          height: 36px; } }
+    @media screen and (min-width: 768px) {
       body header {
+        padding-left: 10px;
         justify-content: left;
-        padding-left: 10px; } }
+        -webkit-justify-content: left; } }
   body main > .row {
     height: 84vh;
     min-height: 500px;
@@ -92,67 +80,78 @@ body {
       background-image: url("../images/people_2.png"); }
     body main > .row #people-wrapper div:nth-of-type(2) {
       background-image: url("../images/people_3.png"); }
-    body main > .row #in-progress .row {
-      height: 100%;
+    body main > .row #in-progress {
       padding: 0; }
-      body main > .row #in-progress .row #man {
+      body main > .row #in-progress div {
         position: absolute;
-        width: 100%;
         height: 100%;
-        left: 0;
-        top: 0;
-        background: transparent url("../images/man.png") no-repeat center center;
-        background-size: contain; }
-        @media screen and (min-width: 576px) {
-          body main > .row #in-progress .row #man {
-            background-position: left center; } }
-      body main > .row #in-progress .row #shout-text {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         width: 100%;
-        height: 100%;
-        right: 0;
-        top: 0;
-        font-size: 35px;
-        font-weight: 600;
-        text-transform: uppercase;
-        text-align: center; }
-        @media screen and (min-width: 400px) {
-          body main > .row #in-progress .row #shout-text {
-            font-size: 50px; } }
-        @media screen and (min-width: 576px) and (min-height: 600px) {
-          body main > .row #in-progress .row #shout-text {
-            text-align: left;
-            font-size: 75px; } }
-        @media screen and (min-width: 768px) {
-          body main > .row #in-progress .row #shout-text {
-            font-size: 50px; } }
-        @media screen and (min-width: 900px) {
-          body main > .row #in-progress .row #shout-text {
-            font-size: 70px; } }
-        @media screen and (min-width: 1100px) {
-          body main > .row #in-progress .row #shout-text {
-            font-size: 90px; } }
-        @media screen and (min-width: 1300px) {
-          body main > .row #in-progress .row #shout-text {
-            font-size: 100px; } }
-    @media screen and (min-width: 400px) {
-      body main > .row #in-progress {
-        text-align: left; } }
+        padding: 0; }
+        body main > .row #in-progress div #man {
+          position: absolute;
+          display: none;
+          width: 50%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background: transparent url("../images/man.png") no-repeat center center;
+          background-size: contain; }
+          @media screen and (min-width: 350px) {
+            body main > .row #in-progress div #man {
+              display: block; } }
+          @media screen and (min-width: 576px) {
+            body main > .row #in-progress div #man {
+              background-position: left center; } }
+        body main > .row #in-progress div #shout-text {
+          position: absolute;
+          display: -webkit-flex;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          right: 0;
+          top: 0;
+          font-size: 50px;
+          font-weight: 600;
+          text-transform: uppercase;
+          text-align: center; }
+          @media screen and (min-width: 350px) {
+            body main > .row #in-progress div #shout-text {
+              width: 50%;
+              font-size: 35px; } }
+          @media screen and (min-width: 400px) {
+            body main > .row #in-progress div #shout-text {
+              font-size: 50px; } }
+          @media screen and (min-width: 576px) and (min-height: 600px) {
+            body main > .row #in-progress div #shout-text {
+              text-align: left;
+              font-size: 75px; } }
+          @media screen and (min-width: 768px) {
+            body main > .row #in-progress div #shout-text {
+              font-size: 45px; } }
+          @media screen and (min-width: 900px) {
+            body main > .row #in-progress div #shout-text {
+              font-size: 60px; } }
+          @media screen and (min-width: 1100px) {
+            body main > .row #in-progress div #shout-text {
+              font-size: 80px; } }
+          @media screen and (min-width: 1300px) {
+            body main > .row #in-progress div #shout-text {
+              font-size: 90px; } }
+      @media screen and (min-width: 400px) {
+        body main > .row #in-progress {
+          text-align: left; } }
   body footer {
-    padding: 0 30px;
+    padding: 12px 30px;
     min-height: 8vh;
-    border-top: 2px solid #D9D9D9;
-    background: #5fc3e1;
     text-align: center; }
     @media screen and (max-width: 992px) {
       body footer .row div:first-of-type:before {
         content: "";
         position: absolute;
         left: 25%;
-        bottom: 0;
+        bottom: -0%;
         height: 2px;
         width: 50%;
         /* or 100px */
@@ -160,12 +159,16 @@ body {
     body footer h2 {
       font-weight: 400;
       font-size: 20px;
+      line-height: 30px;
       text-transform: uppercase;
-      margin-top: 10px;
-      padding-bottom: 5px; }
+      padding-bottom: 10px; }
+      @media screen and (min-width: 992px) {
+        body footer h2 {
+          padding-bottom: 0; } }
     body footer #links {
-      margin-top: 10px; }
-      body footer #links span {
+      padding-top: 5px; }
+      body footer #links a span {
+        margin-top: 5px;
         font-size: 15px;
         display: inline-block;
         margin-left: 25px;
@@ -174,23 +177,33 @@ body {
         background-repeat: no-repeat;
         background-position: left center;
         background-size: auto 100%;
-        padding-left: 25px;
-        padding-top: 5px; }
-      body footer #links #phone {
-        background-image: url("../images/ico_phone.png"); }
-      body footer #links #email {
+        padding-top: 5px;
+        color: #e42159; }
+        @media screen and (min-width: 992px) {
+          body footer #links a span {
+            margin-top: 0px; } }
+        body footer #links a span:hover {
+          text-decoration: underline; }
+      body footer #links a #phone {
+        background-image: url("../images/ico_phone.png");
+        padding-left: 20px; }
+      body footer #links a #email {
         background-image: url("../images/ico_email.png");
         background-size: 23px auto;
         padding-left: 30px; }
-      body footer #links #address {
+      body footer #links a #address {
         background-image: url("../images/ico_address.png");
         background-size: 14px auto;
-        padding-left: 17px; }
+        padding-left: 20px; }
+      @media screen and (min-width: 992px) {
+        body footer #links {
+          padding-top: 0; } }
     @media screen and (min-width: 992px) {
       body footer {
-        text-align: left; } }
+        text-align: left;
+        padding-bottom: 0; } }
     @media screen and (min-width: 1270px) {
       body footer {
-        padding-top: 20px; } }
+        padding-top: 23px; } }
 
 /*# sourceMappingURL=main.css.map */
